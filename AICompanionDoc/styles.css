@@ -1,0 +1,291 @@
+html, body {
+  margin: 0;
+  padding: 0; /* if you want no default space */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+    
+body {
+   background-color: #060940;
+   color: rgb(128, 151, 234);
+   font-family: Arial, sans-serif;
+   line-height: 1.1;
+   display: flex;
+ }
+
+    #navbar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 72, 72, 0.8); /* a subtle dark overlay */
+  z-index: 0;
+}
+
+#navbar {
+  background-color: #4f4848;
+  background-image: url('https://thumbs.dreamstime.com/b/cute-robot-exploring-forest-path-sunset-futuristic-ai-companion-discovering-nature-friendly-walks-down-as-world-347701522.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center top; /* adjust this to cut more from bottom */
+  color: rgb(22, 47, 136);
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #251c7d;
+  width: 19vw; /* 19% of viewport width */
+  min-width: 150px;
+  max-width: 300px;
+  min-height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar * {
+  position: relative;
+  z-index: 1;
+}
+
+ .navbar-item {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #374151;
+}
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 1em;
+  width: 90%;
+}
+
+#navbar li {
+  border: 2px solid #4fc3f7;
+  box-shadow: 0 0 10px #0ff;
+  padding: 0.2em 0.3em; /* reduced vertical & horizontal padding */
+  margin-bottom: 0.5em;
+  border-radius: 50px;
+  font-family: 'Arial Black', Arial, sans-serif; /* bold-looking font */
+  font-weight: 700;   /* make text bold */
+  font-size: 1.1em; 
+}
+
+.nav-link {
+   display: block;
+  color: rgba(177, 190, 245, 0.71);
+   text-decoration: none;
+    margin: 0.3em 0;
+  font-size: 0.9em;
+   padding: 0.3em; /* smaller padding */
+    }
+
+  .nav-link:hover {
+  background-color: rgba(128, 128, 128, 0.3); /* light transparent gray */
+  text-decoration: underline;
+  border-radius: 50px; /* optional, to soften edges */
+
+    }
+
+#main-doc {
+    margin-right: 0.2vw; /* match your #navbar width */
+    position: relative;
+    left: 0; /* reset any previous left positioning */
+    margin-left: 19vw; /* match your #navbar width */
+    width: calc(100vw - 19vw); /* makes it fill the rest of the screen */
+    padding: 1em;
+    box-sizing: border-box; /* ensures padding doesn't increase total width */
+}
+
+
+    .main-section {
+      padding: 0.5em;
+      margin-bottom: 1.5em;
+    }
+
+    code {
+      background-color: #5e5f5f;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    ul {
+      margin-left: 2em;
+    }
+
+@media (max-width: 768px) {
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;      /* unset fixed height */
+    overflow: visible; /* allow full display */
+  }
+
+  #main-doc {
+  position: relative;
+  left: 20vw;
+  }
+}
+
+.sub-main-section {
+  scroll-margin-left: 25vw;
+  margin-top: 2em;
+  padding: 1.5em;
+  background-color: rgba(255, 255, 255, 0.05); /* softer transparency */
+  border-top: 3px solid #4fc3f7; /* Neon-colored line */
+  box-shadow: 0 -1px 10px #4fc3f7; /* Neon glow effect above */
+  border-radius: 1px;
+}
+
+#banner-section {
+  position: relative;
+  width: 100vw;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 170px; /* or your chosen height */
+  overflow: hidden;
+  z-index: 2;
+}
+
+#banner-section {
+  position: relative;  /* stays in flow */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#banner-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center -10px;
+  display: block;
+}
+
+#navbar header {
+ font-size: 1.8em;
+ font-weight: bold;
+  margin-bottom: 0.1em;
+  text-align: center;            /* horizontally center text */
+  display: flex;
+  align-items: center;           /* vertically center */
+  justify-content: center;       /* horizontally center flex item */
+  height: 80px;                  /* optional: set a fixed height for the header */
+}
+
+
+  #about_the_developer {
+    background: #0b0f2f;
+    border: 2px solid #4fc3f7;
+    border-radius: 15px;
+    padding: 1em;
+    margin-top: 3em;
+    box-shadow: 0 0 10px #4fc3f7, 0 0 30px #0ff inset;
+    color: #afffff;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-wrap: wrap; /* ✅ allows wrapping if needed */
+    gap: 1.5em;
+    align-items: flex-start;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible; /* ✅ ensures no content is cut */
+  }
+
+#about_the_developer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 70px;
+    object-fit: cover;
+    border: 2px solid #4fc3f7;
+    box-shadow: 0 0 10px #4fc3f7, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+#about-developer-text {
+  display: flex;
+  flex-wrap: wrap;   /* Allow wrapping to next line */
+  gap: 1em;          /* Space between boxes */
+  justify-content: flex-start; /* Align boxes from left */
+}
+
+/* Optional: only stack if screen is super narrow */
+@media (max-width: 480px) {
+  #about_the_developer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-developer-text {
+    text-align: center;
+  }
+}
+
+img, pre, code, table {
+  max-width: 100%;
+  overflow-x: auto;
+  word-break: break-word;
+}
+
+.dev-paragraph {
+  flex: 0 0 250px;  /* fixed width */
+  min-height: 90px; /* or any height you prefer */
+  border: 1.5px solid #4fc3f7;
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: 0 0 10px #4fc3f7;
+  background-color: rgba(11, 15, 47, 0.6);
+  display: flex;
+  flex-direction: column; /* if you want to align content vertically */
+  align-items: center;
+}
+
+.dev-paragraph:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #4fc3f7, 0 0 25px #0ff;
+}
+
+#about-developer-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.dev-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4fc3f7;
+  margin-bottom: 0.5em;
+  margin-LEFT: 0.2em;
+  margin-right: 0.2em;
+  PADDING: 0.5em;
+  text-align: center;
+}
+
+.spacing {
+  height: 1em; /* or whatever vertical space you want */
+  width: 100%; /* optional, depends on context */
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#first-paragraph {
+  
+  margin-right: 0.3em;
+  border: none;
+  box-shadow: none;
+  padding-left: -5em;
+}
+
+#getting-started {
+  list-style-type: decimal;
+}
